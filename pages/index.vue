@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <ms-header></ms-header>
     <main>
       <about></about>
@@ -69,32 +69,13 @@ export default {
   $z-depth-16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
   $z-depth-24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 24px 38px 3px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.4);
 
-  *,*:before,*:after{
-      box-sizing:border-box;
-  }
-  html{
-      font-size: 62.5%;
-  }
-  html, body {
-      height: 100%;
-  }
-  body {
-      font-family: $font;
-      font-size: $font-size;
-      background-color: #DFDFDF;
-  }
+
 
   main{
       margin-top: -3rem;
   }
 
-  a{
-      text-decoration: none;
-  }
 
-  img{
-      max-width: 100%;
-  }
 
   section{
       background-color: $color-white;
@@ -107,12 +88,6 @@ export default {
       lost-center:1280px;
       lost-flex-container:row;
       padding: 3rem;
-  }
-
-  .list{
-      list-style: none;
-      padding: 0;
-      margin: 0;
   }
 
   .section-title{

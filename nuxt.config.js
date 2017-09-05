@@ -1,4 +1,7 @@
 module.exports = {
+  css: [
+    '@/assets/css/custom-bulma.scss'
+  ],
   /*
   ** Headers of the page
   */

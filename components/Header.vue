@@ -11,7 +11,7 @@
           <a href="http://br.linkedin.com/in/mikejavier/" target="_blank" class="social-icons-link"><i class="fa fa-linkedin md-effect-light"></i></a>
           <a href="https://github.com/mikejavier" target="_blank" class="social-icons-link"><i class="fa fa-github md-effect-light"></i></a>
         </div>
-        <a target="_blank" href="https://docs.google.com/document/d/1Ay3gMvsL_Oqv9HQm3iH3mjO5vU0vNCQe4KvD7ewx4EA/edit?usp=sharing" class="raised-button md-effect-light">download <i class="fa fa-download"></i> curriculum</a>
+        <button target="_blank" href="https://docs.google.com/document/d/1Ay3gMvsL_Oqv9HQm3iH3mjO5vU0vNCQe4KvD7ewx4EA/edit?usp=sharing" class="button is-primary">download <i class="fa fa-download"></i> curriculum</button>
       </div>
     </div>
   </header>
