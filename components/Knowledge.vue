@@ -1,157 +1,34 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Minhas habilidades</h1>
-      <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, impedit.</h2>
+  <section class="hero is-dark">
+    <div class="hero-body">
+      <div class="container">
 
-      <div class="content">
-        <div class="box">
-          <h4>Codificação Front-end</h4>
-          <div class="columns is-multiline is-tablet">
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
+        <h1 class="title">Skills</h1>
+
+        <div class="columns">
+          <div class="column is-half">
+            <small class="has-text-centered is-block has-text-light">Front-end</small>
+            <progress class="progress is-large is-primary" value="95" max="100">60%</progress>
+          </div>
+
+          <div class="column is-half">
+            <small class="has-text-centered is-block has-text-light">Back-end</small>
+            <progress class="progress is-large is-primary" value="40" max="100">60%</progress>
           </div>
         </div>
 
-        <div class="box">
-          <h4>Codificação Back-end</h4>
-          <div class="columns is-multiline is-tablet">
-            <div class="column is-2">
-              <small>NodeJS</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>PHP</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <h4>Banco de Dados</h4>
-          <div class="columns is-multiline is-tablet">
-            <div class="column is-2">
-              <small>MongoDB</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>MySQL</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>PostgreSQL</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <h4>Frameworks</h4>
-          <div class="columns is-multiline is-tablet">
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <h4>Outros</h4>
-          <div class="columns is-multiline is-tablet">
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-            <div class="column is-2">
-              <small>html5</small>
-              <progress class="progress is-large" value="60" max="100">60%</progress>
-            </div>
-          </div>
-        </div>
+        <p class="field is-grouped" style="justify-content: space-between; flex-wrap: wrap;">
+          <span class="control is-size-2"><i class="devicon-html5-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-css3-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-javascript-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-nodejs-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-php-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-mongodb-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-mysql-plain colored"></i></span>
+          <span class="control is-size-2"><i class="devicon-wordpress-plain"></i></span>
+          <span class="control is-size-2"><i class="devicon-git-plain colored"></i></span>
+        </p>
       </div>
-
     </div>
   </section>
 </template>

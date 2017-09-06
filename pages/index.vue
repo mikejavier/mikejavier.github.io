@@ -4,8 +4,8 @@
     <main>
       <about></about>
       <knowledge></knowledge>
-      <!-- <timeline></timeline> -->
       <projects></projects>
+      <blog></blog>
     </main>
     <ms-footer></ms-footer>
   </section>
@@ -18,6 +18,7 @@ import About from '~/components/About.vue'
 import Knowledge from '~/components/Knowledge.vue'
 import Timeline from '~/components/Timeline.vue'
 import Projects from '~/components/Projects.vue'
+import Blog from '~/components/Blog.vue'
 
 export default {
   components: {
@@ -26,7 +27,8 @@ export default {
     About,
     Knowledge,
     Timeline,
-    Projects
+    Projects,
+    Blog
   }
 }
 </script>

@@ -1,9 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">projetos</h1>
-
-      <h2 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, voluptatibus!</h2>
+      <h1 class="title">Projects</h1>
 
       <div class="columns is-multiline is-tablet">
         <div class="column is-one-quarter" v-for="repo in repos" v-if="repo.homepage && !repo.fork">
