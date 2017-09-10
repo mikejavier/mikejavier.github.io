@@ -1,0 +1,69 @@
+@import "../core/base.scss";
+
+*,*:before,*:after{
+	@include boxSizing;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #DFDFDF;
+	font-family: $font;
+	font-size: $font-size-base;
+	color: darken($color-grey,20%);
+}
+
+main{
+	margin-top: -$margin-base*3;
+}
+
+a{
+	text-decoration: none;
+}
+
+p{
+	font-size: $font-size;
+}
+
+img{
+	max-width: 100%;
+}
+
+section{
+	background-color: $color-white;
+	margin-bottom: $margin-base*2;
+	@include z-depth(1);
+}
+
+.wrap{
+	@include cf;
+	@include center(1280px);
+	padding: $padding-base;
+}
+
+.list{
+	@extend %ul;
+	@include cf;
+}
+
+.section-title{
+	display: block;
+	width: 100%;
+	margin: $margin-base*2 0;
+	@include cf;
+
+	h1{
+		display: inline-block;
+		margin: 0;
+		padding: 0 1rem;
+		color: $color-grey-dark;
+		text-transform: uppercase;
+
+		i{
+			font-size: $font-size * 2
+		}
+	}
+	
+}

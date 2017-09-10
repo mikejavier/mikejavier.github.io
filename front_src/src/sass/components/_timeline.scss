@@ -1,0 +1,135 @@
+.timeline{
+	position: relative;
+
+	&:before{
+		content: '';
+		position: absolute;
+		width: 4px;
+		background-color: $color-grey-light;
+		height: 90%;
+		top: 7rem;
+		left: 1.5rem;
+		display: block;
+		@include breakpoint(900px){
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+	}
+}
+
+	.timeline-block{
+		position: relative;
+		margin-bottom: $margin-base*2;
+		@include cf;
+
+		&:first-child{
+			margin-top: $margin-base*2;
+		}
+
+		&:nth-of-type(even) .timeline-block-content{
+			@include breakpoint(900px){
+				float: right;
+				text-align: left;	
+			}
+		}
+		
+		&:nth-of-type(even) .timeline-block-footer{
+			@include breakpoint(900px){
+				left: 0;
+				text-align: right;
+
+				& .timeline-block-footer-icon{
+					float: right;
+					margin: 0.3rem 0 0 0.5rem;
+				}	
+			}
+		}
+
+		&:hover{
+			cursor:default;
+		}
+	}
+		.timeline-block-icon{
+			position: absolute;
+			left: -.3rem;
+			width: 30px;
+			height: 30px;
+			background-color: $color-white;
+			border: 4px solid $color-grey-light;
+			@include transition(.2s);
+			@include borderRadius(50%);
+			@include breakpoint(900px){
+				left: 50%;
+				@include transform(translateX(-50%));	
+			}
+
+			&:hover{
+				background-color: $color-grey-light;
+
+				~ .timeline-block-content{
+					background-color: $color-grey-light;
+				}
+				~ .timeline-block-content, ~ .timeline-block-content .timeline-block-footer{
+					@include z-depth($depth:5);	
+				}	
+			}
+		}
+
+		.timeline-block-content{
+			background-color: $color-white;
+			margin-left: $margin-base*2;
+			border: 1px solid #ddd;
+			// @include z-depth($depth:1);	
+			@include transition(.2s);
+			@include breakpoint(900px){
+				width: 45%;
+				margin: 0;
+				clear: both;
+				text-align: right;
+			}
+
+		}
+			.timeline-block-title{
+				font-size: 1.6rem;
+				padding: 1rem 1rem 0;
+				margin: 0;
+				font-weight: 400;
+				color: $color-grey-dark;
+			}
+			.timeline-block-text{
+				font-weight: 300;
+				font-size: 1rem;
+				font-style: italic;
+				padding: $padding-base;
+				margin: 0;
+			}
+			.timeline-block-footer{
+				background-color: $color-light;
+				display: block;
+				padding: 1rem;
+				color: $color-white;
+				// @include z-depth($depth:1);
+				@include transition(.2s);
+				@include breakpoint(900px){
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 45%;
+					text-align: left;
+				}
+				
+			}
+				.timeline-block-footer-icon{
+					font-size: 2rem;
+					float: left;
+					margin: .3rem .5rem 0 0;
+				}
+				.timeline-block-local{
+					font-size: 1rem;
+					font-weight: 500;
+					display: block;
+				}
+
+				.timeline-block-date{
+					font-size: .8rem;
+				}

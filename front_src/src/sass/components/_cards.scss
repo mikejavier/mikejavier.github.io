@@ -1,0 +1,59 @@
+.card-item{
+	margin-bottom: 2rem;
+	position: relative;
+	border: 1px solid #ddd;
+	// @include z-depth($depth:1);
+	@include transition(.2s);
+	@include breakpoint(600px){
+		@include col(1/2, $cycle: 2);
+	}
+	@include breakpoint(900px){
+		@include col(1/3, $cycle: 3, $uncycle:2);
+	}
+
+	&:hover,&:active{
+		@include z-depth(5);
+		background-color: #f3f3f3;
+	}
+
+	&-#{midia}, &-#{midia} > img , a > img {
+		max-width: 100%;
+		height: auto;	
+	}
+	
+	&-#{text} p{
+		margin: 0;
+	}
+
+	&-#{text},&-#{action}{
+		width: 100%;
+		height: 20%;
+		display: block;
+		padding: 1rem;
+		font-size: .9rem;
+
+		& > i {
+			color: #e0e0e0;
+			font-size: 1.2rem;
+			padding: .5rem;
+			// margin: 0 .1rem;
+			width: 23%;
+			height: 23%;
+			text-align: center;
+			cursor:default;
+		}
+
+		.design,
+		.front-end,
+		.responsivo,
+		.wordpress{
+			color: #424242;	
+		}
+	}
+
+	&-#{action}{
+		border-top: 1px solid #ddd;
+		text-align: right;
+		text-transform: uppercase;
+	}	
+}

@@ -1,0 +1,104 @@
+@mixin progress-bar-variant($nome-cor:"preto",$cor-barra:#000,$percento:20){
+	.progress-bar-#{$nome-cor}-#{$percento}{
+		position: absolute;
+		width:  $percento+#{"%"} ;
+		height: 100%;
+		background-color: $cor-barra;			
+	}
+}
+
+.progress-label{
+	margin: 0 0 5px;
+	font-size: .8rem;
+	color: $color-grey-dark;
+}
+
+.progress{
+	background-color: #F3F3F3;
+	height: 30px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 1rem;
+
+
+		@for $i from 1 to 10{
+
+			$valor-percento: 10 * $i;
+			
+			@each $cor, $hex-cor, $valor-percento in 	(verde,#2CC36B,$valor-percento),
+														(azul,#2E8ECE,$valor-percento),
+														(roxo,#9B50BA,$valor-percento),
+														(amarelo,#F2CA26,$valor-percento),
+														(vermelho,#D04233,$valor-percento),
+														(laranja,#e67e22,$valor-percento),
+														(rosa,#D2527F,$valor-percento),
+														(marron,#795548,$valor-percento),
+														(preto,#000,$valor-percento){
+				
+				@include progress-bar-variant($cor,$hex-cor,$valor-percento);
+
+			}
+
+
+		}
+}
+
+
+// Colors
+$barColor: $color-light;
+$overlayColor: $color-white;
+$backColor: $color-white;
+
+
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial{
+	position: relative;
+	margin: 0 auto;
+	width: 140px;
+	height: 140px;
+	border: 2px solid $backColor;// remove gradient color
+	background-color: $barColor;// default 100%
+	@include borderRadius(50%);
+
+  .overlay{
+		position: absolute;
+		width: 70px;
+		height: 70px;
+		background-color: $overlayColor;
+		border-radius: 50%;
+		text-align: center;
+		left: 50%;
+		@include transform(translate(-50%));
+		top: 25%;
+		font-size: 1.5rem;
+		padding: 1rem 0;
+
+  }
+
+}
+  
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+
+$step: 5; // step of % for created classes
+
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+
+@for $i from 0 through $loops {
+  .progress-#{$i*$step}{
+	    @if $i < $half {
+	      $nextdeg: 90deg + ( $increment * $i );
+	      background-image: linear-gradient(90deg, $backColor 50%, transparent 50%, transparent), linear-gradient($nextdeg, $barColor 50%, $backColor 50%, $backColor);
+	    }
+	    @else {
+	      $nextdeg: -90deg + ( $increment * ( $i - $half ) );
+	      background-image: linear-gradient($nextdeg, $barColor 50%, transparent 50%, transparent), linear-gradient(270deg, $barColor 50%, $backColor 50%, $backColor);
+		}
+	}
+
+}

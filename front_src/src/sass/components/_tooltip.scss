@@ -1,0 +1,25 @@
+.tooltip{
+	position: relative;
+	cursor:help !important;
+
+	&:hover:after{
+		content:attr(data-title);
+		position: absolute;
+		bottom: -20px;
+		left: 50%;
+		@include transform(translateX(-50%));
+		display: block;
+		color: #fff;
+		font-size: .7rem;
+		text-transform: uppercase;
+		background-color: rgba(0,0,0,.8);
+		padding: .4rem;
+		@include borderRadius(4px);
+		font-family: $font;
+
+	}
+
+	&:hover:before{
+
+	}
+}

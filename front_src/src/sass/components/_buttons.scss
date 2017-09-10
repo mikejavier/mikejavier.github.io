@@ -1,0 +1,50 @@
+@mixin btn(
+			$btn-border:none,$btn-border-radius:0,
+			$btn-color:$color-white,$btn-background:$color-light,
+			$btn-padding:$padding-base,$btn-margin:0,
+			$btn-font-size:$font-size
+		)
+{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	text-transform: uppercase;
+	font-size: $btn-font-size;
+	border: $btn-border;
+	color: $btn-color;
+	background-color: $btn-background;
+	padding: $btn-padding;
+	margin:$btn-margin;
+	@include borderRadius($btn-border-radius);
+
+	@include transform(translateZ(0));
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+
+	&:hover{
+		// background-color: darken($btn-background,15%);
+	}
+}
+
+
+.raised-button{
+	@include btn();
+	@include z-depth(1);
+	@include transition(.2s);
+
+	&:hover,&:active{
+		@include z-depth(5);	
+	}
+}
+
+.flat-button{
+	@include btn($btn-color:$color-dark,$btn-background:transparent,$btn-margin:0,$btn-padding:$padding-base/2);	
+}
+
+i.md-effect,i.md-effect-light{
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	@include borderRadius(50%);
+}

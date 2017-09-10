@@ -1,0 +1,36 @@
+.dropdown-btn{
+	position: relative;
+
+	&:hover .dropdown{
+		display: block;
+	}
+}
+
+.dropdown{
+	display: none;
+	position: absolute;
+	background-color: #FFF;
+	border: 1px solid #ddd;
+	width: 120px;
+	right: 9px;
+	margin-top: -10px;
+	z-index: 99;
+	@include borderRadius(3px);
+
+	li{
+		display: block;
+		
+		a{
+			display: block;
+			padding: 10px 0;
+			color: #111;
+			font-size: .7rem;
+			text-align: center;
+
+			&:hover{
+				background-color: #E6E6E6;
+			}
+		}
+	}
+}
+	

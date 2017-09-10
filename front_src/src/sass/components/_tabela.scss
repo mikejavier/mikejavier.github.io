@@ -1,0 +1,98 @@
+.tabela {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 10px;
+        vertical-align: middle;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+
+tbody{
+  tr{
+      background-color: #fff;
+      &:nth-child(even){
+        background-color: #F9F9F9;
+      }
+      td{
+        font-size: 1rem;
+        color: #444;
+      }
+      td:first-child, td:last-child{
+        width: 1%;
+        font-size: .7rem;
+      } 
+  }
+}
+
+thead{
+	background-color: #EEE;
+}
+
+
+
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    color: #111;
+    font-size: .8rem;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid #ddd;
+  }
+
+}
+
+
+
+// Responsive tables
+
+.tabela-responsiva {
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    -webkit-overflow-scrolling: touch;
+
+    // Tighten up spacing
+    > .table {
+      margin-bottom: 0;
+
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

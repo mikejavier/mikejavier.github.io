@@ -1,0 +1,31 @@
+{
+  "name": "mike-template",
+  "version": "0.0.0",
+  "authors": [
+    "Mike <mike_ke_01@hotmail.com>"
+  ],
+  "description": "template de inicializacao de front",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "www.michaelsantillan.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "normalize-css": "~3.0.1",
+    "modernizr": "~2.8.3",
+    "outdated-browser": "https://github.com/burocratik/outdated-browser.git#~1.1.0",
+    "breakpoint-sass": "~2.5.0",
+    "waves": "~0.7.1",
+    "material-shadows": "~2.0.1",
+    "jeet.gs": "~6.1.2",
+    "sassy-maps": "~0.4.0"
+  }
+}

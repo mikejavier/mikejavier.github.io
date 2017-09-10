@@ -1,0 +1,15 @@
+.label{
+	padding: 2px;
+	font-size: .6rem;
+	color: #fff;	
+	@include borderRadius(4px);
+}
+.label-sucesso{
+	@extend .label;
+	background-color: #5CB85C;
+}
+
+.label-alerta{
+	@extend .label;
+	background-color: #F0AD4E;
+}

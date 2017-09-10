@@ -1,0 +1,17 @@
+@import "../core/base.scss";
+
+.rodape{
+	background-color: #000;
+	color: $color-white;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+	clear: both;
+}
+	.creditos{
+		margin: 0;
+		text-align: center;
+		padding: 5% 0;
+		font-size: .8rem;
+	}

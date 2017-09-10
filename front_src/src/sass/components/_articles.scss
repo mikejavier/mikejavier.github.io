@@ -1,0 +1,58 @@
+.article{
+	margin-bottom: $margin-base*3;
+	font-size: 0;
+	border: 1px solid #ddd;
+	background-color: $color-white;
+	width: 100%;
+	@include transition(.2s);
+	@include breakpoint(600px){
+		@include col(1/2, $cycle:2);
+	}
+	@include breakpoint(900px){
+		@include col(1/4, $cycle:4, $uncycle:2);
+	}
+	@include breakpoint(1200px){
+		@include col(1/2, $cycle:2, $uncycle:4);
+	}
+
+	&:hover{
+		@include z-depth($depth:5);
+	}
+}
+	.article-thumb{
+		margin: 0;
+		@include breakpoint(1200px){
+			display: inline-block;
+			width: 46%;
+			vertical-align: top;
+		}
+
+		img{
+			display: block;
+			height: auto;
+		}
+	}
+	
+	.article-excerpt{
+		padding: $padding-base;
+
+		@include breakpoint(1200px){
+			width: 54%;
+			display: inline-block;
+			vertical-align: top;
+			padding: .6rem;
+		}
+		
+
+		h2{
+			margin: 0 0 $margin-base/2;
+			font-size: $font-size;
+			color: $color-grey-dark;
+		}
+
+		p{
+			margin: 0;
+			font-size: .8rem;
+			font-style: italic;
+		}
+	}

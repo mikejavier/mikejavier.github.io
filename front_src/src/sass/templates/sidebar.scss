@@ -1,0 +1,151 @@
+@import "../core/base.scss";
+
+.icon-bar-overlay{
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		display: none;
+	}
+
+	.icon-bar{
+		font-size: 1.5rem;
+		color: $color-white;
+		cursor: pointer;
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		text-align: center;
+		padding: 0;
+		z-index: 1;
+		@include transition(.4s);
+
+		i{
+			background-color: $color-light;
+			line-height: 2;
+			width: 2em;
+			height: 2em;
+			position: absolute;
+			@include z-depth(1);
+			@include transition(.2s);
+
+			&:hover,&:active{
+				@include z-depth(5);	
+			}
+
+			&.fa-remove{
+				visibility: hidden;
+			}	
+		}
+	}
+
+	.icon-bar-checkbox{
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		z-index: 1;
+		width: 30px;
+		height: 30px;
+		display: none;
+		
+		&:checked ~ .icon-bar-overlay{
+			display: block;		
+		}
+
+		&:checked ~ .icon-bar{
+			@include transform(translateX(260px));
+
+			i.fa-bars{
+				visibility: hidden;
+			}
+			i.fa-remove{
+				visibility: visible;
+			}
+				
+		}
+		
+		&:checked ~ .lateral{
+			@include transform(translateX(0px));
+		}	
+			
+	}
+
+
+
+
+
+
+.lateral{
+	width: 250px;
+	background-color: #333;
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	@include transform(translateX(-250px));
+	top: 0;
+	@include transition(.4s);
+}
+	.logo{
+		border: 5px solid $color-white;
+		@include borderRadius(50%);
+		width: 150px;
+		height: 150px;
+		margin: 20px auto;
+		display: block;
+	}
+
+	.capa-lateral{
+		background-color: #272727;
+		padding: 1.5rem .5rem;
+		text-align: center;
+		
+		.foto{
+			max-width: 3rem;
+			float: left;
+			@include borderRadius(50%);
+		}
+
+		h1,h2{
+			margin: 0;
+			color: $color-white;
+		}
+	}
+
+	.menu{
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.menu-item{
+			display: block;
+		}
+
+		.menu-link{
+			color: $color-white;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			padding: .5rem 1rem;
+			display: block;
+			border-right: 5px solid #333;
+			@include transition(.2s);
+			@include transform(translateZ(0));
+    		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+
+			& > i{
+				width: 24px;
+				display: inline-block;
+				text-align: center;
+				margin-right: .5rem;
+			}
+
+			&:hover{
+				background-color: #272727;
+				border-color: $color-light;
+				color: $color-light;
+			}
+		}
+
+	}
